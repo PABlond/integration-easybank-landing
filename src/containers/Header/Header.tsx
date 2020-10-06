@@ -3,7 +3,7 @@ import React, { FC } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { Icon, Section, Wrapper } from "../../components"
+import { ButtonLink, Icon, Section, Wrapper } from "../../components"
 import styled from "styled-components"
 import { colors } from "../../utils"
 
@@ -17,7 +17,9 @@ const SectionContainer = styled(Section)`
     .header-content {
       width: 52.7778%;
 
-      h1, p {
+      h1,
+      p,
+      .cta {
         padding: 0 7.5625rem;
       }
 
@@ -25,8 +27,18 @@ const SectionContainer = styled(Section)`
         font-size: 3rem;
       }
 
-      p{
-        color: ${colors.neutral.grayishBlue}
+      p {
+        color: ${colors.neutral.grayishBlue};
+        line-height: 1.8;
+      }
+
+      .cta {
+        text-decoration: none;
+        margin: 0 7.5625rem;
+        margin-top: 2.5rem;
+        padding: 1rem 2rem;
+        display: block;
+        width: fit-content;
       }
     }
 
@@ -40,14 +52,17 @@ const SectionContainer = styled(Section)`
         position: absolute;
       }
 
+      .mockup {
+        top: 0;
+        left: 17%;
+      }
 
       .bg {
         z-index: -1;
-
-        left: -27%;
-        top: -20%;
+        right: 10%;
+        bottom: -5%;
         width: 100%;
-    }
+      }
     }
 
     @media (max-width: 768px) {
@@ -69,7 +84,8 @@ const SectionContainer = styled(Section)`
         }
 
         .bg {
-          z-index: -1
+          z-index: -1;
+        }
       }
     }
   }
@@ -89,6 +105,7 @@ export const Header: FC = () => {
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </p>
+          <ButtonLink href="#">Request Invite</ButtonLink>
         </div>
         <div className="header-imgs">
           <StaticQuery
