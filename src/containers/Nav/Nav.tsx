@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import styled from "styled-components"
 
-import { Icon } from "../../components"
+import { ButtonLink, Icon } from "../../components"
 import { colors } from "../../utils"
 
 const ContainerSection = styled(Section)`
@@ -15,7 +15,7 @@ const ContainerSection = styled(Section)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8.7804%;
+    padding: 0 11.38888%;
 
     .responsive-hamburger {
       display: none;
@@ -85,33 +85,6 @@ const ContainerSection = styled(Section)`
         }
       }
     }
-
-    .cta {
-      overflow: hidden;
-      white-space: nowrap;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0.875rem 2rem;
-      border-radius: 2rem;
-      color: ${colors.neutral.white};
-      text-decoration: none;
-      background: linear-gradient(
-        to right,
-        ${colors.primary.limeGreen},
-        ${colors.primary.brightCyan}
-      );
-      border: 1px solid ${colors.primary.brightCyan};
-      transition: 0.4s;
-
-      &:hover {
-        opacity: 0.6;
-      }
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
   }
   @media (max-width: 768px) {
     position: inherit;
@@ -144,27 +117,17 @@ export const Nav = () => {
 
         <div className="links-container">
           <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
+            {["Home", "About", "Contact", "Blog", "Careers"].map(
+              (menuItem: string, key: number) => (
+                <li key={key}>
+                  <a href="#">{menuItem}</a>
+                </li>
+              )
+            )}
           </ul>
         </div>
 
-        <a className="cta" href="#">
-          Request Invite
-        </a>
+        <ButtonLink href="#">Request Invite</ButtonLink>
 
         {open ? (
           <Icon.Close className="responsive-hamburger" onClick={toggleOpen} />
