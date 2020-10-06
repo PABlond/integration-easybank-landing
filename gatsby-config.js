@@ -2,8 +2,8 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Chat app FEM PABlond`,
-    description: "Integration of chat app by PABlond for Front end Mentors",
+    title: `Easybank FEM PABlond`,
+    description: "Integration of Easybank by PABlond for Front end Mentors",
     author: `@PABlond`,
   },
   plugins: [
