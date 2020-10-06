@@ -1,58 +1,8 @@
 import React, { FC } from "react"
-import styled from "styled-components"
 
 import { Icon, Section, Wrapper as WrapMe } from "../../components"
 import { colors } from "../../utils"
-
-const Wrapper = styled(WrapMe)`
-  padding: 7rem 0;
-
-  h1,
-  .sub-title {
-    padding: 0 7.5625rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 300;
-  }
-
-  .sub-title {
-    width: 50%;
-    margin−top: 2.3125;
-    color: ${colors.neutral.grayishBlue};
-  }
-`
-
-const Container = styled.div`
-  margin-top: 4.5rem;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 7.5625rem;
-
-  div {
-    svg {
-      margin-bottom: 2.5rem;
-    }
-
-    h3 {
-      font-weight: 400;
-      margin: 0;
-    }
-
-    p {
-      margin-top: 2rem;
-      color: ${colors.neutral.grayishBlue};
-      font-size: 13px;
-      line-height: 1.5rem;
-    }
-  }
-
-  div:nth-child(2),
-  div:nth-child(3) {
-    padding: 0 1rem;
-  }
-`
+import { Wrapper, Container } from "./Why.style"
 
 export const Why: FC = () => {
   return (
