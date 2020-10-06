@@ -2,85 +2,9 @@ import React, { FC } from "react"
 
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styled from "styled-components"
 
-import { Section, Wrapper as WrapMe } from "../../components"
-import { colors } from "../../utils"
-
-const Wrapper = styled(WrapMe)`
-  padding: 6.25rem 7.5625rem;
-  background: ${colors.neutral.veryLightGray};
-
-  h2 {
-    color: ${colors.primary.darkBlue};
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-`
-
-const Container = styled.div`
-  display: flex;
-
-  .item {
-    text-decoration: none;
-    border-radius: 0.5rem;
-    background: ${colors.neutral.white};
-    width: 100%;
-
-    &:hover {
-      h4 {
-        color: ${colors.primary.limeGreen};
-      }
-    }
-
-    .gatsby-image-wrapper {
-      border-radius: 0.5rem 0.5rem 0 0;
-      height: 200px;
-    }
-
-    span,
-    h4,
-    p {
-      padding: 0 1.5rem;
-    }
-
-    span {
-      font-size: 10px;
-      display: block;
-      color: ${colors.neutral.grayishBlue};
-      padding-top: 1.75rem !important;
-      padding-bottom: 1.75rem !important;
-    }
-
-    h4 {
-      margin: 0;
-      font-weight: 400;
-      transition: 0.3s;
-      color: ${colors.primary.darkBlue};
-    }
-
-    p {
-      color: ${colors.neutral.grayishBlue};
-      font-size: 13px;
-      line-height: 1.5rem;
-      margin-bottom: 1.75rem;
-    }
-  }
-
-  .item:nth-child(1) {
-    margin-right: 1rem;
-  }
-
-  .item:nth-child(2) {
-    margin-left: 1rem;
-  }
-
-  .item:nth-child(3),
-  .item:nth-child(4) {
-    margin-left: 2rem;
-  }
-`
+import { Wrapper } from "../../components"
+import { Section, Container } from "./Articles.style"
 
 export const Articles: FC = () => {
   return (
