@@ -105,9 +105,14 @@ export const MenuContainer = styled.div`
       display: block;
       color: ${colors.neutral.white};
       text-decoration: none;
+      transition: 0.4s;
 
       &:visited {
         color: ${colors.neutral.white};
+      }
+
+      &:hover {
+        color: ${colors.primary.limeGreen};
       }
     }
 
