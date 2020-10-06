@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import styled, { createGlobalStyle } from "styled-components"
 
-import { Header, Nav } from "../containers"
+import { Articles, Header, Nav, Why } from "../containers"
 import { Types } from "../utils"
 
 const GlobalStyle = createGlobalStyle`
@@ -35,6 +35,8 @@ export default ({ data }: { data: { site: Types.Site } }) => {
       <Container>
         <Nav />
         <Header />
+        <Why />
+        <Articles />
       </Container>
     </>
   )
